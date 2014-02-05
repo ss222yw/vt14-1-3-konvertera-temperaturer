@@ -13,5 +13,46 @@ namespace KonverteraTemperaturer
         {
 
         }
+
+        protected void Button_Click(object sender, EventArgs e)
+        {
+            if (IsValid)
+            {
+                convert.Visible = true;
+                tabel.Visible = true;
+                var startTemp = int.Parse(StartingTemperature.Text);
+                var endTemp = int.Parse(EndTemperature.Text);
+                var tempStep = int.Parse(TemperatureStep.Text);
+
+                if (FahrenheitToCelsius.Checked)
+                {
+                    left.Text = "&degF";
+                    right.Text = "&degC";
+                }
+
+                for (int i = startTemp; i <= endTemp; i +=tempStep )
+                {
+                    TableRow tRow = new TableRow();
+                    TableCell[] tCell = new TableCell[]
+                    {
+                       new TableCell(),
+                       new TableCell()
+                    };
+                    tabel.Rows.Add(tRow);
+                    tRow.Cells.AddRange(tCell);
+
+                    tCell[0].Text = String.Format("{0}", i);
+                    tCell[1].Text = FahrenheitToCelsius.Checked?
+                        String.Format("{0}", Model.TemperatureConverter.FahrenheitToCelsius(i)):
+                        String.Format("{0}", Model.TemperatureConverter.CelsiusToFahrenheit(i));
+
+                }
+               
+                
+
+            }
+
+        }
+
     }
 }

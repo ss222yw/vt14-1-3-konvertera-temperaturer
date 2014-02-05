@@ -1,0 +1,51 @@
+﻿#ValidationSummary {color:red;
+}
+
+
+#RequiredFieldValidator1 {color:red;
+}
+
+
+#CompareValidator1 {color:red;
+}
+
+#RequiredFieldValidator {
+    color:red;
+}
+
+
+#CompareValidator2 {color:red;
+}
+
+#tabel {
+background-color:black;
+float: right;
+margin-right: 888px;
+border:2px solid hsl(0, 0%, 12%);
+}
+
+tr {
+background-color: hsl(0, 0%, 66%);
+}
+
+td {
+padding: 10px;
+width: 120px;
+text-align: center;
+}
+
+#CompareValidator3 {color:red;
+}
+
+
+#CompareValidator4 {color:red;
+}
+
+
+#RequiredFieldValidator2 {color:red;
+}
+
+
+#RangeValidator1 {color:red;
+}
+
