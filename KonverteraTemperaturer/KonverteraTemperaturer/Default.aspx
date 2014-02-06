@@ -11,7 +11,7 @@
 
 </head>
 <body>
-    <h1>Konvertera temperaturer</h1>
+    <h1>Konvertera temperaturer </h1>
     <form id="form1" runat="server" defaultbutton="Button">
          <asp:ValidationSummary ID="ValidationSummary" runat="server"  HeaderText="Fel inträffade. Åtgärda felen och försök igen."/>
         <div id="content">

@@ -42,9 +42,19 @@ namespace KonverteraTemperaturer
                     tRow.Cells.AddRange(tCell);
 
                     tCell[0].Text = String.Format("{0}", i);
-                    tCell[1].Text = FahrenheitToCelsius.Checked?
-                        String.Format("{0}", Model.TemperatureConverter.FahrenheitToCelsius(i)):
-                        String.Format("{0}", Model.TemperatureConverter.CelsiusToFahrenheit(i));
+                    //tCell[1].Text = FahrenheitToCelsius.Checked?
+
+                        if(FahrenheitToCelsius.Checked)
+                        {
+                            tCell[1].Text = String.Format("{0}", Model.TemperatureConverter.FahrenheitToCelsius(i));
+                        }
+                    else
+                        {
+                            tCell[1].Text = String.Format("{0}", Model.TemperatureConverter.CelsiusToFahrenheit(i));
+                        }
+
+                        //String.Format("{0}", Model.TemperatureConverter.FahrenheitToCelsius(i)):
+                        //String.Format("{0}", Model.TemperatureConverter.CelsiusToFahrenheit(i));
 
                 }
                
